@@ -4,7 +4,7 @@ function log {
 	git --no-pager log --oneline --decorate --graph "$@"
 }
 
-filter_pattern=$(git config bubbles.pattern || echo "--")
+filter_pattern=$(git config bubbles.pattern || echo "!")
 mine=$(git config bubbles.remote-name || echo "origin")
 
 commit=$(git find-pushable-head "$filter_pattern")
